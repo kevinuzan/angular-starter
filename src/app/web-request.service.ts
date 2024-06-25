@@ -9,7 +9,8 @@ export class WebRequestService {
   readonly ROOT_URL;
 
   constructor(private http: HttpClient) {
-    this.ROOT_URL = 'http://localhost:3000';
+    //this.ROOT_URL = 'http://localhost:3000';
+    this.ROOT_URL = import.meta.env['URL_BACKEND']; // Recommended
     // this.ROOT_URL = process.env['URL_BACKEND'];
   }
 
